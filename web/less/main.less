@@ -1,0 +1,147 @@
+/** Variables **/
+@text-color: #fff;
+@link-color: #ed145b;
+@main-font: "museo-slab-1", "museo-slab-2", serif;
+@bodyWidth: 720px;
+
+/** Mixins **/
+.roundedCorners {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.centerHorizontal {
+    margin: 0 auto;
+}
+
+
+/** Reset & Basics (Inspired by E. Meyers) **/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/** Main Style **/
+body {
+    font: 16px/20px @main-font;
+    color: @text-color;
+    background: #000 url(/images/background.jpg) 0 0 no-repeat;
+    background-size: 100% auto;
+}
+
+h1 {
+    color: @link-color;
+    font-size: 26px;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.button {
+    .roundedCorners;
+    background-color: @link-color;
+    color: @text-color;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.mainContent {
+    width: @bodyWidth;
+    margin: 85px auto;
+    position: relative;
+}
+
+.mainContentEnd {
+    position: fixed;
+    bottom: 52px;
+    width: @bodyWidth;
+    .centerHorizontal;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 10px;
+}
+
+footer a {
+    color: @text-color;
+}
+
+footer a > img {
+    vertical-align: text-bottom;
+}
+
+.footerContent {
+    width: @bodyWidth;
+    .centerHorizontal;
+}
+
+p {
+    margin: 1em 0;
+}
+
+.intro {
+    margin-bottom: 320px;
+}

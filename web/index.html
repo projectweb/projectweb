@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>ProjectWeb</title>
+    <meta name="description" content="Weaving a Better Web">
+
+    <meta name="author" content="Team ProjectWeb">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Humans
+  ================================================== -->
+    <link type="text/plain" rel="author" href="/humans.txt" />
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Lato:400,700,400italic">
+    <link rel="stylesheet/less" type="text/css" href="/less/main.less">
+    <script src="/js/less-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://use.typekit.com/jit8zck.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <!-- Favicons
+    ==================================================
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/silly_57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/silly_72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/silly_114x114.png">
+    -->
+</head>
+<body>
+<div class="container">
+    <div class="mainContent">
+        <h1>Web + Tech + Community</h1>
+        <p class="intro">
+            ProjectWeb envisions itself as a community of like-minded people where individuals
+            can find common ground for web education and communication.
+        </p>
+
+        <div class="mainContentEnd">
+            <p>
+                We provide for education through the development of curriculum and sponsoring seminars
+                and events emphasizing best practices and open web standards.
+            </p>
+            <p>
+                <a href="#" class="button">Contact Us</a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footerContent">
+            <a href="http://twitter.com/#!/projectwebph" title="Follow us on Twitter!">
+                <img src="/images/twitter_icon.png" alt="Twitter">
+                @projectweb
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+(function($){
+    $(function(){
+        $(window).resize(function(){
+            // Scale typographic header when resizing
+            // reScaleHeader();
+            console.log('hello');
+            // $('.container').before(
+            //     '<img src="/images/background.jpg" // id="theBackground">'
+            // );
+        });
+        $('.container').animate({opacity: 1}, 500);
+    });
+})(jQuery);
+</script>
+</body>
+</html>
