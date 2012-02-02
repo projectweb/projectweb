@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+
+{% block title %}ProjectWeb{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Weaving a Better Web">
+<meta name="author" content="Team ProjectWeb">
+{% endblock %}
+
+
+{% block stylesheets %}
+{% stylesheets filter='less'
+    '@ProjectWebSiteBundle/Resources/less/main.less'
+%}
+    <link href="{{ asset_url }}" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+{% endblock %}
+
+
+{% block headScripts %}
+<script type="text/javascript" src="http://use.typekit.com/jit8zck.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div class="mainContent">
+        {% block mainContent %}{% endblock %}
+    </div>
+    <footer>
+        <div class="footerContent">
+            <a href="http://twitter.com/#!/projectwebph" title="Follow us on Twitter!">
+                <img src="/bundles/projectwebsite/images/twitter_icon.png" alt="Twitter">
+                @projectweb
+            </a>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+
+
+{% block javascripts %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+(function($){
+    $(function(){
+        $('.container').animate({opacity: 1}, 500);
+    });
+})(jQuery);
+</script>
+{% endblock %}

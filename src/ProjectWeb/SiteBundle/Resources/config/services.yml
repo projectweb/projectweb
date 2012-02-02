@@ -1,0 +1,7 @@
+parameters:
+#    project_web_site.example.class: ProjectWeb\SiteBundle\Example
+
+services:
+#    project_web_site.example:
+#        class: %project_web_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
