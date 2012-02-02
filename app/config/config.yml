@@ -30,7 +30,7 @@ assetic:
         cssrewrite: ~
         less:
             node: %assetic.node_bin%
-            node_paths: [/home/wayne/.node_libraries]
+            node_paths: [%assetic.node_paths%]
         # closure:
         #     jar: %kernel.root_dir%/java/compiler.jar
         # yui_css:
