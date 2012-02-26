@@ -1,8 +1,10 @@
 /** Variables **/
 @text-color: #fff;
-@link-color: #ed145b;
+@heading-color: #ed145b;
+@link-color: #00B7FA; /*#00a3df;*/
 @main-font: "museo-slab-1", "museo-slab-2", serif;
-@bodyWidth: 720px;
+@default-font-size: 16px;
+@bodyWidth: 580px;
 
 /** Mixins **/
 .roundedCorners {
@@ -61,29 +63,80 @@ table {
 }
 
 
+/** Forms **/
+.fieldRow {
+    padding: 10px;
+    margin-left: -10px;
+    clear: both;
+}
+
+label, .fieldWrap {
+    display: block;
+}
+
+input, textarea {
+    font-size: @default-font-size;
+    font-family: @main-font;
+}
+
+.fieldText, .fieldEmail, textarea {
+    border: none;
+    padding: 5px;
+    background-color: #ddd;
+    color: #333;
+}
+
+.fieldText, .fieldEmail {
+    width: 235px;
+}
+
+.fieldFull {
+    width: 570px;
+}
+
+textarea {
+    width: 570px;
+    height: 200px;
+}
+
+
 
 /** Main Style **/
 body {
-    font: 16px/20px @main-font;
+    font: @default-font-size @main-font;
+    line-height: 20px;
     color: @text-color;
     background: #000 url(/bundles/projectwebsite/images/background.jpg) 0 0 no-repeat;
     background-size: 100% auto;
 }
 
+.h1 {
+    color: @heading-color;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -.05em;
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+}
+
 h1 {
-    text-indent: -999em;
+    .h1
 }
 
 h2, .intro {
     font-size: 22px;
-    margin: 21px 0 9px;
+    margin: 17px 0 17px;
     line-height: 30px;
 }
 
 hgroup h2 {
-    color: @link-color;
-    font-size: 32px;
-    font-weight: normal;
+    .h1;
+}
+
+hgroup h1 {
+    text-indent: -999em;
+    height: 0;
 }
 
 a {
@@ -98,15 +151,23 @@ a:hover {
 
 .button {
     .roundedCorners;
-    background-color: @link-color;
+    background-color: darken(@link-color, 10%);
     color: @text-color;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 10px 7px;
     font-weight: bold;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .button:hover {
     text-decoration: none;
+    background-color: @link-color;
+}
+
+input.button {
+    font-size: 20px;
 }
 
 .container {
@@ -118,14 +179,10 @@ a:hover {
 .mainContent {
     width: @bodyWidth;
     margin: 30px auto;
+    padding: 40px;
+    background-color: #666;
+    background-color: rgba(0,0,0, .4);
     position: relative;
-}
-
-.mainContentEnd {
-    position: fixed;
-    bottom: 52px;
-    width: @bodyWidth;
-    .centerHorizontal;
 }
 
 footer {

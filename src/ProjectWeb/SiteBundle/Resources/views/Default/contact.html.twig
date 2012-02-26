@@ -1,0 +1,16 @@
+{% extends 'ProjectWebSiteBundle::layout.html.twig' %}
+
+{% block mainContent %}
+<h1>Contact Us</h1>
+<form action="{{ path('ProjectWebSiteBundle_contact') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_errors(form) }}
+
+    {{ form_rest(form) }}
+
+    <div class="fieldRow actions">
+        <input type="submit" class="button" value="Send Message">
+        or
+        <a href="{{ path('ProjectWebSiteBundle_homepage') }}">Cancel</a>
+    </div>
+</form>
+{% endblock %}

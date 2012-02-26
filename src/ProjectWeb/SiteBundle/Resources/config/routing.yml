@@ -1,3 +1,7 @@
 ProjectWebSiteBundle_homepage:
     pattern:  /
     defaults: { _controller: ProjectWebSiteBundle:Default:index }
+
+ProjectWebSiteBundle_contact:
+    pattern: /contact
+    defaults: { _controller: ProjectWebSiteBundle:Default:contact }

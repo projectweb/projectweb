@@ -1,0 +1,36 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block form_widget %}
+{% spaceless %}
+    {% set attr = attr|merge({'class': attr.class|default('') ~ ' form' }) %}
+    {{ parent() }}
+{% endspaceless %}
+{% endblock form_widget %}
+
+{% block field_row %}
+{% spaceless %}
+    <div class="fieldRow">
+        {{ form_label(form, label|default(null)) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+    </div>
+{% endspaceless %}
+{% endblock field_row %}
+
+{% block field_widget %}
+{% spaceless %}
+    {% set field_wrap = field_wrap|default(true) %}
+    {% set type = type|default('text') %}
+    {% set attr = attr|merge({'class': attr.class|default('') ~ ' field' ~ type|capitalize }) %}
+    {% if field_wrap %}<span class="fieldWrap">{% endif %}
+        {{ parent() }}
+    {% if field_wrap %}</span>{% endif %}
+{% endspaceless %}
+{% endblock field_widget %}
+
+{% block textarea_widget %}
+{% spaceless %}
+    {% set attr = attr|merge({'class': attr.class|default('') ~ ' fieldTextarea' }) %}
+    <span class="fieldWrap">{{ parent() }}</span>
+{% endspaceless %}
+{% endblock textarea_widget %}
